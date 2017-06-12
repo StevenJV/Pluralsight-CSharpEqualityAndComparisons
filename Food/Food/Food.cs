@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Food
 {
-  public struct Food
+  public class Food
   {
     private string _name;
     public string Name { get { return _name; } }
