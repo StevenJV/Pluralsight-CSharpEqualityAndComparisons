@@ -20,7 +20,7 @@ namespace Food
       string bananaStr = "banana";
       string copyOfBananaStr = string.Copy(bananaStr);
 
-      Console.WriteLine($"BananaStr.Equals((object)copyOfBananaStr) ? {bananaStr.Equals((object)copyOfBananaStr)} // string.Equals looks at contnets, treating strings like values rather than references");
+      Console.WriteLine($"BananaStr.Equals((object)copyOfBananaStr) ? {bananaStr.Equals((object)copyOfBananaStr)} // STRUCTS are values ");
 
 
     }
