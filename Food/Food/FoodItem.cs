@@ -33,6 +33,16 @@ namespace Food
       return false;
     }
 
+    public static bool operator ==(FoodItem lhs, FoodItem rhs)
+    {
+      return lhs.Equals(rhs);
+    }
+
+    public static bool operator !=(FoodItem lhs, FoodItem rhs)
+    {
+      return !(lhs == rhs);
+    }
+
     public override string ToString()
     {
       return _name;
