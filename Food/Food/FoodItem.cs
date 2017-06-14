@@ -26,6 +26,13 @@ namespace Food
       return this._name == other._name && this._group == other._group;
     }
 
+    public override bool Equals(object obj)
+    {
+      if (obj is FoodItem)
+        return Equals((FoodItem) obj);
+      return false;
+    }
+
     public override string ToString()
     {
       return _name;
