@@ -33,6 +33,13 @@ namespace Food
       return false;
     }
 
+    public override int GetHashCode()
+      // if Equals is overridden, GetHashCod must also be overridden for 
+      // dictionaries (and anything else that uses hashes) to work properly
+    {
+      return _name.GetHashCode() ^ _group.GetHashCode();
+    }
+
     public static bool operator ==(FoodItem lhs, FoodItem rhs)
     {
       return lhs.Equals(rhs);
