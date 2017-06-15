@@ -29,6 +29,16 @@ namespace Food
       Console.WriteLine($"ReferenceEquals(bananaStr,copyOfBananaStr) ? {ReferenceEquals(bananaStr,copyOfBananaStr)} // ReferenceEquals checks for two pointers to the same object ");
 
 
+      Console.WriteLine("\n--- overloaded Equals() and == ");
+
+      FoodItem redDelicious = new FoodItem("apple", FoodGroup.Fruit);
+      FoodItem grannySmith = new FoodItem("apple", FoodGroup.Fruit);
+      FoodItem cake = new FoodItem("birthday", FoodGroup.Sweets);
+
+      Console.WriteLine($"redDelicious ==   grannySmith : "+(redDelicious == grannySmith));
+      Console.WriteLine($"grannySmith  ==   cake        : " +(grannySmith == cake));
+      Console.WriteLine($"cake         ==   redDelicious: " +(cake == redDelicious));
+
     }
   }
 }
