@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Food
 {
-  public enum FoodGroup { Meat, Fruit, Vegetables, Sweets}
+  public enum FoodGroup
+  {
+    Meat,
+    Fruit,
+    Vegetables,
+    Sweets
+  }
+
   struct FoodItem : IEquatable<FoodItem>
   {
     private readonly string _name;
@@ -54,6 +61,5 @@ namespace Food
     {
       return _name;
     }
-
   }
 }

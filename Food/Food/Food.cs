@@ -8,12 +8,13 @@ namespace Food
 {
   public class Food
   {
-    private string _name;
-    public string Name { get { return _name; } }
+    private readonly string _name;
+
+    public string Name => _name;
 
     public Food(string name)
     {
-      this._name = name;
+      _name = name;
     }
 
     public override string ToString()
