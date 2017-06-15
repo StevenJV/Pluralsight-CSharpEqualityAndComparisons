@@ -39,6 +39,10 @@ namespace Food
       Console.WriteLine($"grannySmith  ==   cake        : " +(grannySmith == cake));
       Console.WriteLine($"cake         ==   redDelicious: " +(cake == redDelicious));
 
+      Console.WriteLine("redDelicious.Equals(grannySmith): " + redDelicious.Equals(grannySmith));
+      Console.WriteLine("grannySmith.Equals(cake)        : " + grannySmith.Equals(cake));
+      Console.WriteLine("cake.Equals(redDelicious)       : " + cake.Equals(redDelicious));
+
+      }
     }
   }
-}
