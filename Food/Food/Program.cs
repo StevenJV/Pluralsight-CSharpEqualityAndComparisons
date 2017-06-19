@@ -50,9 +50,24 @@ namespace Food
       Console.WriteLine("\n--- overloaded Equals() and == for Reference Types");
       Food apple = new Food("apple", FoodGroup.Fruit);
       CookedFood stewedApple = new CookedFood("stewed","apple",FoodGroup.Fruit);
-      Console.WriteLine(apple);
-      Console.WriteLine(stewedApple);
+      CookedFood BakedApple = new CookedFood("baked", "apple", FoodGroup.Fruit);
+      CookedFood stewedApple2 = new CookedFood("stewed","apple",FoodGroup.Fruit);
+      Food apple2 = new Food("apple", FoodGroup.Fruit);
 
+      DisplayWhetherEqueal(apple, stewedApple);
+      DisplayWhetherEqueal( stewedApple, BakedApple);
+      DisplayWhetherEqueal( stewedApple, stewedApple2);
+      DisplayWhetherEqueal(apple, apple2);
+      DisplayWhetherEqueal(apple, apple);
+
+    }
+
+    static void DisplayWhetherEqueal(Food food1, Food food2)
+    {
+      if (food1 == food2)
+        Console.WriteLine($"{food1,12} == {food2}");
+      else
+        Console.WriteLine($"{food1,12} != {food2}");
     }
   }
 }
