@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// example of overriding equality for VALUE TYPES
+using System;
 
 namespace Food
 {

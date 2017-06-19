@@ -10,9 +10,9 @@ namespace Food
   {
     static void Main(string[] args)
     {
-      Food banana = new Food("banana");
-      Food banana2 = new Food("banana");
-      Food chocolate = new Food("chocolate");
+      Food banana = new Food("banana",FoodGroup.Fruit);
+      Food banana2 = new Food("banana", FoodGroup.Fruit);
+      Food chocolate = new Food("chocolate", FoodGroup.Sweets);
 
       Console.WriteLine($"Banana.Equals(chocolate) ? {banana.Equals(chocolate)}");
       Console.WriteLine(
@@ -33,7 +33,7 @@ namespace Food
         $"ReferenceEquals(bananaStr,copyOfBananaStr) ? {ReferenceEquals(bananaStr, copyOfBananaStr)} // ReferenceEquals checks for two pointers to the same object ");
 
 
-      Console.WriteLine("\n--- overloaded Equals() and == ");
+      Console.WriteLine("\n--- overloaded Equals() and == for Value Types");
 
       FoodItem redDelicious = new FoodItem("apple", FoodGroup.Fruit);
       FoodItem grannySmith = new FoodItem("apple", FoodGroup.Fruit);
@@ -46,6 +46,13 @@ namespace Food
       Console.WriteLine("redDelicious.Equals(grannySmith): " + redDelicious.Equals(grannySmith));
       Console.WriteLine("grannySmith.Equals(cake)        : " + grannySmith.Equals(cake));
       Console.WriteLine("cake.Equals(redDelicious)       : " + cake.Equals(redDelicious));
+
+      Console.WriteLine("\n--- overloaded Equals() and == for Reference Types");
+      Food apple = new Food("apple", FoodGroup.Fruit);
+      CookedFood stewedApple = new CookedFood("stewed","apple",FoodGroup.Fruit);
+      Console.WriteLine(apple);
+      Console.WriteLine(stewedApple);
+
     }
   }
 }
