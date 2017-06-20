@@ -43,6 +43,7 @@ namespace Food
       Console.WriteLine("cake.Equals(redDelicious)       : " + cake.Equals(redDelicious));
 
       Console.WriteLine("\n--- overloaded Equals() and == for Reference Types. , Classes are reference types.");
+      Console.WriteLine("  think very carefully before overloading Reference types, it's not often something you really want to do.");
       Food apple = new Food("apple", FoodGroup.Fruit);
       CookedFood stewedApple = new CookedFood("stewed", "apple", FoodGroup.Fruit);
       CookedFood bakedApple = new CookedFood("baked", "apple", FoodGroup.Fruit);
