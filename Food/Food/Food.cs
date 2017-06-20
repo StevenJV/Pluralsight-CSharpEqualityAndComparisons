@@ -45,6 +45,7 @@ namespace Food
       return object.Equals(x, y);
       // don't do this. Base class has no idea if we're really in a derived class
       // return x._name == y._name && x._group == y._group
+      // to work with inheretance, equality logics needs to be in virtual Equals method not anywhere else. 
     }
 
     public static bool operator !=(Food x, Food y){
