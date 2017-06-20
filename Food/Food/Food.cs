@@ -10,14 +10,12 @@ namespace Food
     public string Name => _name;
     public FoodGroup Group => _group;
 
-    public Food(string name, FoodGroup group)
-    {
+    public Food(string name, FoodGroup group){
       _name = name;
       _group = group;
     }
 
-    public override string ToString()
-    {
+    public override string ToString(){
       return _name;
     }
   }
